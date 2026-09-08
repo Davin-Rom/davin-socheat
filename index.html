@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#A85F6B">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>មង្គលការ រុំ ដាវីន & ស៊ិន សុជាតិ</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="សិរីមង្គលអាពាហ៍ពិពាហ៍ រុំ ដាវីន & ស៊ិន សុជាតិ">
+<meta property="og:description" content="សូមគោរពអញ្ជើញចូលរួមជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធិពរជ័យសិរីសួស្ដី">
+<meta property="og:image" content="assets/images/couple.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Moul&family=Kantumruy+Pro:wght@300;400;500;600;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<link rel="apple-touch-icon" href="assets/images/favicon.svg">
+<link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body class="locked">
+
+<!-- ============ ធៀបគម្រប / COVER ============ -->
+<div id="cover" class="cover">
+  <div class="cover-inner">
+    <div class="frame">
+      <div class="corner tl"></div><div class="corner tr"></div>
+      <div class="corner bl"></div><div class="corner br"></div>
+
+      <!-- ក្បាច់ផ្កាមាស / gold botanical ornaments -->
+      <span class="orn o-tl"></span><span class="orn o-tr"></span>
+      <span class="orn o-bl"></span><span class="orn o-br"></span>
+
+      <div class="cover-content">
+        <img class="motif top" src="assets/images/motif.svg" alt="" onerror="this.style.display='none'">
+        <p class="cover-kh-sub">សិរីមង្គល</p>
+        <h1 class="cover-title">អាពាហ៍ពិពាហ៍</h1>
+        <div class="divider"><span></span>❖<span></span></div>
+
+        <div class="cover-names">
+          <p class="kh-name">រុំ ដាវីន</p>
+          <p class="amp">&amp;</p>
+          <p class="kh-name">ស៊ិន សុជាតិ</p>
+        </div>
+
+        <div class="divider"><span></span>❖<span></span></div>
+        <p class="cover-date" id="coverDate">ថ្ងៃ… ខែ… ឆ្នាំ…</p>
+        <p class="cover-to">សូមគោរពអញ្ជើញ</p>
+        <p class="cover-guest" id="guestName"></p>
+
+        <button id="openBtn" class="btn-open">
+          <span>បើកធៀបអញ្ជើញ</span>
+        </button>
+        <p class="cover-hint">សូមចុចដើម្បីបើក ♪</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ចម្រៀង / MUSIC ============ -->
+<audio id="bgm" loop preload="auto"></audio>
+<button id="musicBtn" class="music-btn" aria-label="ចម្រៀង" hidden>
+  <svg viewBox="0 0 24 24" class="ico-note"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+</button>
+
+<!-- ============ មាតិកា / MAIN ============ -->
+<main id="main" class="main" aria-hidden="true">
+  <div class="petals" id="petals"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="sprig s-left"></span><span class="sprig s-right"></span>
+    <div class="hero-photo">
+      <div class="photo-ring">
+        <img src="assets/images/couple.jpg" alt="រុំ ដាវីន និង ស៊ិន សុជាតិ"
+             onerror="this.parentNode.classList.add('no-photo');this.remove();">
+        <div class="photo-fallback">D <span>&amp;</span> S</div>
+      </div>
+    </div>
+    <p class="script-en reveal">Wedding Invitation</p>
+    <h2 class="hero-names reveal">
+      <span>រុំ ដាវីន</span>
+      <em>&amp;</em>
+      <span>ស៊ិន សុជាតិ</span>
+    </h2>
+    <p class="hero-en reveal">ROM DAVIN &nbsp;&amp;&nbsp; SIN SOCHEAT</p>
+    <div class="divider gold reveal"><span></span>❖<span></span></div>
+    <p class="hero-date reveal" id="heroDate">ថ្ងៃ… ខែ… ឆ្នាំ…</p>
+  </section>
+
+  <!-- ឪពុកម្តាយ / PARENTS -->
+  <section class="section parents orn-tr">
+    <h3 class="sec-title reveal">មាតាបិតាទាំងសងខាង</h3>
+    <div class="parents-grid">
+      <div class="parent-card reveal">
+        <p class="side-label">មាតាបិតាកូនប្រុស</p>
+        <p class="p-name">លោក ឆុំ សាវុធ</p>
+        <p class="p-name">លោកស្រី ទេព ប៉ូឡុង</p>
+      </div>
+      <div class="parents-sep"><span></span>❖<span></span></div>
+      <div class="parent-card reveal">
+        <p class="side-label">មាតាបិតាកូនស្រី</p>
+        <p class="p-name">លោក សំ នី</p>
+        <p class="p-name">លោកស្រី ឈិន ស្រីលាភ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- សេចក្ដីអញ្ជើញ / INVITATION TEXT -->
+  <section class="section invite orn-bl">
+    <div class="invite-card reveal">
+      <h3 class="sec-title">សេចក្ដីអញ្ជើញ</h3>
+      <div class="divider gold sm"><span></span>❖<span></span></div>
+      <p>មានកិត្តិយសសូមគោរពអញ្ជើញ</p>
+      <p class="strong">ឯកឧត្តម លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា<br>ព្រមទាំងសាច់ញាតិមិត្តភក្ដិជាទីមេត្រី</p>
+      <p>អញ្ជើញចូលរួមជាភ្ញៀវកិត្តិយស ដើម្បីប្រសិទ្ធិពរជ័យសិរីសួស្ដី
+         ជ័យមង្គលក្នុងពិធីរៀបអាពាហ៍ពិពាហ៍ កូនប្រុស–កូនស្រី របស់យើងខ្ញុំ
+         ដោយក្ដីសោមនស្សរីករាយ។</p>
+      <p class="thanks">សូមអរព្រះគុណ និងសូមអរគុណ</p>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="section countdown-sec orn-tr orn-bl on-dark">
+    <h3 class="sec-title reveal">រាប់ថយក្រោយ</h3>
+    <div class="countdown reveal" id="countdown">
+      <div class="cd-box"><b id="cdD">០</b><i>ថ្ងៃ</i></div>
+      <div class="cd-box"><b id="cdH">០</b><i>ម៉ោង</i></div>
+      <div class="cd-box"><b id="cdM">០</b><i>នាទី</i></div>
+      <div class="cd-box"><b id="cdS">០</b><i>វិនាទី</i></div>
+    </div>
+    <p class="cd-note" id="cdNote"></p>
+  </section>
+
+  <!-- កម្មវិធី / PROGRAM -->
+  <section class="section program orn-tr orn-bl">
+    <h3 class="sec-title reveal">កម្មវិធីមង្គលការ</h3>
+    <div class="divider gold sm reveal"><span></span>❖<span></span></div>
+
+    <div class="day-block reveal">
+      <p class="day-label">ថ្ងៃចូលរោង</p>
+      <p class="day-date" id="dayDate1">ថ្ងៃ… ខែ… ឆ្នាំ…</p>
+    </div>
+    <ul class="timeline">
+      <li class="reveal"><span class="dot"></span>
+        <div class="t-time">០៤:០០ រសៀល</div>
+        <div class="t-name">ពិធីសែនក្រុងពាលី</div>
+      </li>
+    </ul>
+
+    <div class="day-block reveal">
+      <p class="day-label">ថ្ងៃមង្គលការ</p>
+      <p class="day-date" id="dayDate2">ថ្ងៃ… ខែ… ឆ្នាំ…</p>
+    </div>
+    <ul class="timeline">
+      <li class="reveal"><span class="dot"></span>
+        <div class="t-time">០៧:០០ ព្រឹក</div>
+        <div class="t-name">ពិធីហែជំនូន</div>
+      </li>
+      <li class="reveal"><span class="dot"></span>
+        <div class="t-time">០៩:៣០ ព្រឹក</div>
+        <div class="t-name">ពិធីកាត់សក់</div>
+      </li>
+      <li class="reveal"><span class="dot"></span>
+        <div class="t-time">១១:០០ ព្រឹក</div>
+        <div class="t-name">ពិធីបង្វិលពពិល</div>
+      </li>
+      <li class="reveal"><span class="dot"></span>
+        <div class="t-time">១១:៣០ ព្រឹក</div>
+        <div class="t-name">ពិធីសំពះផ្ទឹម</div>
+      </li>
+      <li class="reveal"><span class="dot"></span>
+        <div class="t-time">០៤:០០ រសៀល</div>
+        <div class="t-name">ពិធីជប់លៀង</div>
+      </li>
+    </ul>
+
+    <button class="btn-outline reveal" id="calBtn">
+      <svg viewBox="0 0 24 24" class="ico"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+      រក្សាទុកក្នុងប្រតិទិន
+    </button>
+  </section>
+
+  <!-- ទីតាំង / LOCATION -->
+  <section class="section location orn-bl">
+    <h3 class="sec-title reveal">ទីតាំងកម្មវិធី</h3>
+    <div class="divider gold sm reveal"><span></span>❖<span></span></div>
+    <div class="loc-card reveal">
+      <svg viewBox="0 0 24 24" class="ico-pin"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      <p class="loc-line">ភូមិ ជ្រោយតាប៉ា ឃុំ គគីរ</p>
+      <p class="loc-line">ស្រុក កៀនស្វាយ ខេត្ត កណ្ដាល</p>
+      <a class="btn-gold" id="mapBtn" href="https://maps.app.goo.gl/XsWNcCwxu3Gex77GA" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        មើលផែនទី
+      </a>
+    </div>
+  </section>
+
+  <!-- រូបភាព / GALLERY -->
+  <section class="section gallery-sec orn-tr">
+    <h3 class="sec-title reveal">អាល់ប៊ុមរូបភាព</h3>
+    <div class="divider gold sm reveal"><span></span>❖<span></span></div>
+    <div class="gallery" id="gallery">
+      <figure class="g-item reveal"><img src="assets/images/photo1.jpg" alt="" loading="lazy" onerror="this.closest('.g-item').remove()"></figure>
+      <figure class="g-item reveal"><img src="assets/images/photo2.jpg" alt="" loading="lazy" onerror="this.closest('.g-item').remove()"></figure>
+      <figure class="g-item reveal"><img src="assets/images/photo3.jpg" alt="" loading="lazy" onerror="this.closest('.g-item').remove()"></figure>
+      <figure class="g-item reveal"><img src="assets/images/photo4.jpg" alt="" loading="lazy" onerror="this.closest('.g-item').remove()"></figure>
+    </div>
+    <p class="gallery-empty" id="galleryEmpty" hidden>ដាក់រូបភាពក្នុងថត <code>assets/images/</code></p>
+  </section>
+
+  <!-- ទំនាក់ទំនង / CONTACT -->
+  <section class="section contact orn-tr orn-bl">
+    <h3 class="sec-title reveal">ទំនាក់ទំនង</h3>
+    <div class="divider gold sm reveal"><span></span>❖<span></span></div>
+    <div class="contact-btns reveal">
+      <a class="btn-call" href="tel:087864332">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+        087 864 332
+      </a>
+      <a class="btn-call" href="tel:0964029709">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+        096 402 9709
+      </a>
+      <button class="btn-outline" id="shareBtn">
+        <svg viewBox="0 0 24 24" class="ico"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+        ចែករំលែកធៀប
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer orn-tr orn-bl on-dark">
+    <div class="divider gold sm"><span></span>❖<span></span></div>
+    <p class="f-thanks">សូមអរគុណ</p>
+    <p class="f-names">រុំ ដាវីន &amp; ស៊ិន សុជាតិ</p>
+    <p class="f-sub">Thank you for celebrating with us</p>
+  </footer>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/config.js?v=3"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>
