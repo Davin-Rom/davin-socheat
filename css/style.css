@@ -416,3 +416,47 @@ body::before{
   .orn-tr::before,.orn-bl::after{width:120px;height:120px}
   .gallery{grid-template-columns:repeat(4,1fr);gap:14px}
 }
+
+/* =========================================================
+   🌹 ផ្ទៃខាងក្រោយផ្កាកុលាប — ទំព័រខាងក្នុងតែប៉ុណ្ណោះ
+   ផ្ទាំងគម្របធៀប (.cover) នៅដដែល មិនប៉ះពាល់
+   ========================================================= */
+.main{
+  position:relative;
+  background:
+    linear-gradient(180deg,#FFF9F6 0%,#FDF0EA 28%,#FFF8F4 58%,#FCEEE9 100%);
+}
+/* កម្រាលផ្កាតូចៗពេញទំព័រ */
+.main::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url("../assets/images/rose-tile.svg") repeat;
+  background-size:300px 300px;
+  opacity:.2;
+}
+
+/* ជួរផ្កាកុលាបខាងលើ និងខាងក្រោម */
+.rose-band{
+  display:block;width:100%;
+  height:clamp(70px,16vw,150px);
+  background:url("../assets/images/rose-garland.svg") no-repeat center bottom/cover;
+  position:relative;z-index:1;pointer-events:none;
+}
+.rose-band.bottom{transform:scaleY(-1)}
+
+/* ផ្នែកពណ៌ក្រែមក្លាយជាថ្លា ដើម្បីឲ្យផ្ទៃផ្កាបង្ហាញឆ្លងកាត់ */
+.hero,.parents,.invite,.program,.location,.gallery-sec,.contact{
+  background:transparent;
+}
+.hero{padding-top:26px}
+
+/* ប្រអប់សេចក្ដីអញ្ជើញ ៖ ស ស្រាលៗ ឲ្យអក្សរច្បាស់លើផ្ទៃផ្កា */
+.invite-card{background:rgba(255,255,255,.88);backdrop-filter:blur(2px)}
+.loc-card{background:rgba(255,255,255,.9)}
+
+/* ផ្នែកពណ៌ rose gold (countdown + footer) នៅដដែល */
+.countdown-sec,.footer{position:relative;z-index:1}
+
+@media (min-width:560px){
+  .rose-band{height:clamp(90px,13vw,170px)}
+  .main::before{background-size:360px 360px}
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <g id="sm">
+      <circle r="11" fill="#F0B9C2"/>
+      <circle r="7" fill="#F8D6DB"/>
+      <path d="M-7 2A7 7 0 1 1 4 6" stroke="#E491A2" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+      <circle r="2.4" fill="#FCE8EB"/>
+    </g>
+    <g id="pl">
+      <path d="M0 0C5 -8 16 -10 24 -4C16 4 5 7 0 0Z" fill="#C9D4BA"/>
+    </g>
+  </defs>
+  <g opacity=".9">
+    <use href="#sm" transform="translate(60 58) scale(1.1)"/>
+    <use href="#pl" transform="translate(84 70) rotate(24) scale(.9)"/>
+    <use href="#sm" transform="translate(268 128) scale(.85)"/>
+    <use href="#pl" transform="translate(238 138) rotate(196) scale(.8)"/>
+    <use href="#sm" transform="translate(150 232) scale(1)"/>
+    <use href="#pl" transform="translate(172 244) rotate(18) scale(.85)"/>
+    <use href="#sm" transform="translate(340 312) scale(.9)"/>
+    <use href="#pl" transform="translate(312 322) rotate(200) scale(.8)"/>
+    <use href="#sm" transform="translate(44 340) scale(.75)"/>
+    <use href="#pl" transform="translate(206 42) rotate(-14) scale(.75)"/>
+    <use href="#pl" transform="translate(96 168) rotate(206) scale(.7)"/>
+    <use href="#pl" transform="translate(300 216) rotate(-30) scale(.7)"/>
+  </g>
+</svg>
