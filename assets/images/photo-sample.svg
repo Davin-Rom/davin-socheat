@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" fill="none">
+  <rect width="300" height="400" fill="#FBE7EF"/>
+  <rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#D9A8BC" stroke-width="1.6" stroke-dasharray="10 8"/>
+  <g transform="translate(150 168)" stroke="#C08B9B" stroke-width="3" fill="none" stroke-linejoin="round">
+    <rect x="-46" y="-30" width="92" height="68" rx="9"/>
+    <path d="M-18 -30l8-12h20l8 12"/>
+    <circle cx="0" cy="6" r="18"/>
+  </g>
+  <g fill="#C98FA4">
+    <path d="M150 252c-9-8-14-12-14-18a7.5 7.5 0 0 1 14-4 7.5 7.5 0 0 1 14 4c0 6-5 10-14 18z"/>
+  </g>
+  <text x="150" y="300" text-anchor="middle" font-family="Khmer Sangam MN, Kantumruy Pro, sans-serif"
+        font-size="17" fill="#A8697F">រូបថតគំរូ</text>
+  <text x="150" y="326" text-anchor="middle" font-family="Khmer Sangam MN, Kantumruy Pro, sans-serif"
+        font-size="13" fill="#B88597">នឹងបន្ថែមក្រោយ</text>
+</svg>
