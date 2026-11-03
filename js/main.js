@@ -55,11 +55,14 @@
 
   /* ------------------- ឈ្មោះភ្ញៀវ ?to=... / guest name ------------------- */
   try {
-    const to = new URLSearchParams(location.search).get('to');
-    const g = $('#guestName');
-    if (to && g) {
+    const q    = new URLSearchParams(location.search);
+    const code = q.get('g');                       // ?g=7  — ខ្លី (ណែនាំ)
+    const list = window.GUESTS || {};
+    const name = (code && list[code]) || q.get('to') || '';   // ?to=ឈ្មោះ — បម្រុង
+    const g    = $('#guestName');
+    if (name && g) {
       // '&' ជាប់ជាមួយពាក្យបន្ទាប់ ដើម្បីកុំឲ្យបាក់ជួរអាក្រក់
-      g.textContent = to.trim().slice(0, 60).replace(/\s*&\s*/g, ' &\u00A0');
+      g.textContent = name.trim().slice(0, 60).replace(/\s*&\s*/g, ' &\u00A0');
       document.body.classList.add('has-guest');
     }
   } catch (e) { /* ignore */ }
