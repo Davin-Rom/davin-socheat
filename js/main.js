@@ -58,7 +58,8 @@
     const to = new URLSearchParams(location.search).get('to');
     const g = $('#guestName');
     if (to && g) {
-      g.textContent = to.trim().slice(0, 60);
+      // '&' ជាប់ជាមួយពាក្យបន្ទាប់ ដើម្បីកុំឲ្យបាក់ជួរអាក្រក់
+      g.textContent = to.trim().slice(0, 60).replace(/\s*&\s*/g, ' &\u00A0');
       document.body.classList.add('has-guest');
     }
   } catch (e) { /* ignore */ }
