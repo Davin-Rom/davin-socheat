@@ -56,9 +56,10 @@
   /* ------------------- ឈ្មោះភ្ញៀវ ?to=... / guest name ------------------- */
   try {
     const to = new URLSearchParams(location.search).get('to');
-    if (to) {
-      const g = $('#guestName');
-      if (g) g.textContent = decodeURIComponent(to).slice(0, 60);
+    const g = $('#guestName');
+    if (to && g) {
+      g.textContent = to.trim().slice(0, 60);
+      document.body.classList.add('has-guest');
     }
   } catch (e) { /* ignore */ }
 

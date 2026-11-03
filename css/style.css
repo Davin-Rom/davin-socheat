@@ -559,3 +559,26 @@ body::before{
   .photo-fallback b{font-size:3rem}
   .photo-fallback small{font-size:.92rem}
 }
+
+/* ---------- ឈ្មោះភ្ញៀវលើទំព័រមុខ / personalised guest name ---------- */
+.cover-guest:not(:empty){
+  display:inline-block;
+  margin:8px auto 0;
+  padding:9px 24px;
+  font-family:var(--font-kh-title);
+  font-size:.94rem;
+  font-weight:400;
+  line-height:1.95;
+  color:#8A4A57;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(201,143,164,.75);
+  border-radius:4px;
+  box-shadow:0 3px 14px rgba(138,74,87,.12);
+  max-width:94%;
+}
+body.has-guest .cover-to{
+  font-size:.9rem;letter-spacing:.06em;color:#A2838C;margin-bottom:2px;
+}
+@media (min-width:560px){
+  .cover-guest:not(:empty){font-size:1.1rem;padding:11px 30px}
+}
