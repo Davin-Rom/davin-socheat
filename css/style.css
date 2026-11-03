@@ -580,34 +580,37 @@ body::before{
 /* ---------- ឈ្មោះភ្ញៀវលើទំព័រមុខ / personalised guest name ---------- */
 .guest-plate{display:none}
 body.has-guest .guest-plate{
-  display:block;
-  width:fit-content;max-width:min(94%,460px);
-  margin:10px auto 2px;
-  padding:12px 30px 14px;
-  background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,.34));
-  border-radius:3px;
-  box-shadow:0 4px 18px rgba(138,74,87,.10);
+  display:flex;align-items:center;justify-content:center;
+  gap:2px;margin:12px auto 2px;max-width:100%;
 }
 body.has-guest .cover-to{
   font-size:.86rem;letter-spacing:.14em;color:#A2838C;margin-bottom:0;
 }
-.gp-rule{
-  display:flex;align-items:center;justify-content:center;gap:9px;
-  color:#C9A227;font-size:.6rem;line-height:1;opacity:.85;
+.gp-orn{
+  flex:0 0 auto;width:34px;height:46px;
+  background:url("../assets/images/kbach-scroll.svg") no-repeat center/contain;
 }
-.gp-rule i{
-  display:block;width:52px;height:1px;
-  background:linear-gradient(90deg,transparent,#C9A47F,transparent);
+.gp-orn.flip{transform:scaleX(-1)}
+.gp-box{
+  flex:0 1 auto;min-width:0;
+  padding:9px 18px;
+  background:linear-gradient(180deg,#8A4A57,#703B46);
+  border:1px solid #C9A05F;
+  border-radius:3px;
+  box-shadow:inset 0 0 0 3px rgba(0,0,0,.18),
+             inset 0 0 0 4px rgba(201,160,95,.55),
+             0 4px 16px rgba(112,59,70,.3);
 }
 .cover-guest{
+  display:block;
   font-family:var(--font-kh-title);font-weight:400;
-  font-size:1.08rem;line-height:1.95;letter-spacing:.01em;
-  color:#8A4A57;margin:7px 0;
-  text-wrap:balance;
-  text-shadow:0 1px 0 rgba(255,255,255,.6);
+  font-size:.96rem;line-height:1.95;letter-spacing:.01em;
+  color:#F7E6C8;text-wrap:balance;
+  text-shadow:0 1px 2px rgba(0,0,0,.35);
 }
+@media (min-width:380px){ .gp-orn{width:40px;height:54px} .cover-guest{font-size:1.04rem} }
 @media (min-width:560px){
-  body.has-guest .guest-plate{padding:14px 40px 16px}
-  .cover-guest{font-size:1.24rem}
-  .gp-rule i{width:70px}
+  .gp-orn{width:48px;height:62px}
+  .gp-box{padding:11px 26px}
+  .cover-guest{font-size:1.18rem}
 }
