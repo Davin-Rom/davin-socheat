@@ -2,7 +2,7 @@
 """បង្កើត js/guests.js ពី Guest-List-Davin-Socheat.xlsx
 
 ដំណើរការ៖  /usr/bin/python3 tools/build-guests.py
-លេខកូដ = លំដាប់ឈ្មោះដែលមិនទទេ ក្នុងជួរឈរ ខ (ដូច «ល.រ» ក្នុង Excel)
+លេខកូដ = លេខជួរ Excel ដក ៤ (ជួរ ៥ -> 1) — មិនរំកិលពេលលុបឈ្មោះចេញ
 """
 import json, os, sys
 import openpyxl
@@ -24,8 +24,8 @@ def main():
         name = str(name).strip()
         if not name:
             continue
+        guests[str(row - 4)] = name   # លេខកូដ = លេខជួរ ដក ៤ (ដូច Excel)
         n += 1
-        guests[str(n)] = name
     body = json.dumps(guests, ensure_ascii=False, indent=2)
     with open(OUT, 'w', encoding='utf-8') as f:
         f.write('/* បង្កើតដោយស្វ័យប្រវត្តិ — tools/build-guests.py · កុំកែដោយដៃ */\n')
