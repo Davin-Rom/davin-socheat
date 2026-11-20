@@ -6,6 +6,7 @@
 ឯកសារ                                កូដ
   Guest-List-Davin-Socheat.xlsx      ជួរ ដក ៤          -> 1 ឡើង
   Guest-List-Davin-Socheat-2.xlsx    ជួរ ដក ៤ បូក ១០០០ -> 1001 ឡើង
+  Guest-List-Davin-Socheat-3.xlsx    ជួរ ដក ៤ បូក ២០០០ -> 2001 ឡើង
 លេខកូដចងនឹងលេខជួរ ដូច្នេះវាមិនរំកិលពេលលុបឈ្មោះចេញទេ ។
 """
 import json, os, sys
@@ -19,6 +20,7 @@ OUT  = os.path.join(PROJ, 'js', 'guests.js')
 BOOKS = [
     ('Guest-List-Davin-Socheat.xlsx',      0),
     ('Guest-List-Davin-Socheat-2.xlsx', 1000),
+    ('Guest-List-Davin-Socheat-3.xlsx', 2000),
 ]
 
 def read(path, offset, guests):
